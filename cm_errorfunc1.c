@@ -3,7 +3,7 @@
 int shortstack_error(unsigned int line_number, char *site);
 int div_error(unsigned int line_number);
 int pop_error(unsigned int line_number);
-int pchar_error(unsigned int line_number, car *info);
+int pchar_error(unsigned int line_number, char *info);
 int pint_error(unsigned int line_number);
 
 /**

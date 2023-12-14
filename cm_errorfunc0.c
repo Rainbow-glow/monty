@@ -33,7 +33,7 @@ void setoperatoks_error(int err_code)
 	exits = get_int(err_code);
 	if (!exits)
 	{
-		free(nya-toks);
+		free(nya_toks);
 		malloc_error();
 	}
 	nya_toks[i++] = exits;
