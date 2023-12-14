@@ -2,7 +2,7 @@
 #include <string.h>
 
 void free_tokens(void);
-unsigned int token_arr_len(void);
+unsigned int token_arrlen(void);
 int is_empty_line(char *line, char *delims);
 void (*get_op_func(char *opcode))(stack_t**, unsigned int);
 int run_monty(FILE *script_fd);
@@ -24,11 +24,11 @@ void free_tokens(void)
 }
 
 /**
- * token_arr_len - Gets the length of current operatoks.
+ * token_arrlen - Gets the length of current operatoks.
  *
  * Return: Length of current operatoks (as int).
  */
-unsigned int token_arr_len(void)
+unsigned int token_arrlen(void)
 {
 	unsigned int toks_len = 0;
 
@@ -143,9 +143,9 @@ int run_monty(FILE *script_fd)
 			free_tokens();
 			break;
 		}
-		prev_tok_len = token_arr_len();
+		prev_tok_len = token_arrlen();
 		op_func(&stack, line_number);
-		if (token_arr_len() != prev_tok_len)
+		if (token_arrlen() != prev_tok_len)
 		{
 			if (operatoks && operatoks[prev_tok_len])
 				exit_status = atoi(operatoks[prev_tok_len]);
