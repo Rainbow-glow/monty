@@ -6,7 +6,8 @@ void cm_stack(stack_t **stack, unsigned int line_number);
 void cm_queue(stack_t **stack, unsigned int line_number);
 
 /**
- * cm_rotl - Spins the top value of a stack_t linked list to the bottom You could call it rotate-left.
+ * cm_rotl - Spins the top value of a stack_t linked list to the bottom
+ *		You could call it rotate-left.
  * @stack: A pointer to the top mode node of a stack_t linked list.
  * @line_number: The current working line number of a Monty bytecodes file.
  */
@@ -58,7 +59,9 @@ void cm_rotr(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * cm_stack - Converts a queue to a stack. You know the drill it's logically easyand you can wrap yourself around ityou know Sam stock is a functionthat converts a stack to a queueand it's as simple as that...
+ * cm_stack - Converts a queue to a stack. You know the drill it's logically
+ *	easy and you can wrap yourself around it you know Sam stock is a function
+ *	that converts a stack to a queueand it's as simple as that...
  * @stack: A pointer to the top mode node of a stack_t linked list.
  * @line_number: The current working line number of a Monty bytecodes file.
  */

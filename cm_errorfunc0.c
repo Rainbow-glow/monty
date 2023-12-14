@@ -37,12 +37,13 @@ void setoperatoks_error(int err_code)
 		malloc_error();
 	}
 	nya_toks[i++] = exits;
-	nya_toks[i] =NULL;
+	nya_toks[i] = NULL;
 	free(operatoks);
 	operatoks = nya_toks;
 }
 
-/** malloc_error - prints malloc error message.
+/**
+ * malloc_error - prints malloc error message.
  *
  * Return: prints EXIT_FAILURE.
  */

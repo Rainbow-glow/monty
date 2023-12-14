@@ -12,20 +12,21 @@ int checks_mode(stack_t **stack);
  */
 int start_stack(stack_t **stack)
 {
-    stack_t *p;
+	stack_t *p;
 
-    p = malloc(sizeof(stack_t));
-    if (p == NULL) {
-        return EXIT_FAILURE;
-    }
+	p = malloc(sizeof(stack_t));
+	if (p == NULL)
+	{
+		return (EXIT_FAILURE);
+	}
 
-    p->n = STACK;
-    p->prev = NULL;
-    p->next = NULL;
+	p->n = STACK;
+	p->prev = NULL;
+	p->next = NULL;
 
-    *stack = p;
+	*stack = p;
 
-    return EXIT_SUCCESS;
+	return (EXIT_SUCCESS);
 }
 
 /**
@@ -36,12 +37,12 @@ int start_stack(stack_t **stack)
  */
 int checks_mode(stack_t **stack)
 {
-    if ((*stack)->n == STACK)
-        return STACK;
-    else if ((*stack)->n == QUEUE)
-        return QUEUE;
-    else
-        return 2;
+	if ((*stack)->n == STACK)
+		return (STACK);
+	else if ((*stack)->n == QUEUE)
+		return (QUEUE);
+	else
+		return (2);
 }
 
 /**
@@ -50,12 +51,12 @@ int checks_mode(stack_t **stack)
  */
 void free_stack(stack_t **stack)
 {
-    stack_t *head = *stack;
+	stack_t *head = *stack;
 
-    while (*stack)
-    {
-        head = (*stack)->next;
-        free(*stack);
-        *stack = head;
-    }
+	while (*stack)
+	{
+		head = (*stack)->next;
+		free(*stack);
+		*stack = head;
+	}
 }
