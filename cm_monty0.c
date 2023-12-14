@@ -11,7 +11,7 @@ void cm_pall(stack_t **stack, unsigned int line_number);
 
 void cm_push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *dens, * new_ele;
+	stack_t *dens, *new_ele;
 	int x;
 
 	new_ele = malloc(sizeof(stack_t));
@@ -63,7 +63,7 @@ void cm_push(stack_t **stack, unsigned int line_number)
 /**
  * cm_pall - prints all the values on the stack, starting from the top.
  * @stack: a pointer to top mode node of the stack.
- * @line_number; the line number of the file.
+ * @line_number: the line number of the file.
  */
 
 void cm_pall(stack_t **stack, unsigned int line_number)
