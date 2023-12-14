@@ -2,8 +2,6 @@
 #include <sys/types.h>
 #include <sys/fcntl.h>
 
-char **operatoks = NULL; /* Global variable */
-
 /**
  * main - the entry point for monty interpreter.
  * @argc: Argument count.
