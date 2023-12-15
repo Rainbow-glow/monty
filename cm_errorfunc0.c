@@ -16,7 +16,7 @@ void setoperatoks_error(int err_code)
 	char *exits = NULL;
 	char **nya_toks = NULL;
 
-	toks_len = toks_arrlen();
+	toks_len = token_arrlen();
 	nya_toks = malloc(sizeof(char *) * (toks_len + 2));
 	if (!operatoks)
 	{
@@ -63,6 +63,6 @@ int malloc_error(void)
 
 int noint_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%U: usage: push integer\n", line_number);
+	fprintf(stderr, "L%u: usage: push integer\n", line_number);
 	return (EXIT_FAILURE);
 }
