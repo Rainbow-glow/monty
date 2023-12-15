@@ -1,3 +1,4 @@
+#define  _POSIX_C_SOURCE 200809L
 #ifndef __MONTY_H__
 #define __MONTY_H__
 
@@ -5,7 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <sys\types.h>
+/* #include <sys\types.h> */
 #include <ctype.h>
 #include <fcntl.h>
 
