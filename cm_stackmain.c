@@ -2,7 +2,7 @@
 
 void free_stack(stack_t **stack);
 int start_stack(stack_t **stack);
-int checks_mode(stack_t **stack);
+int checks_mode(stack_t *stack);
 
 /**
  * start_stack - Initiates a stack_t list with stack and queue nodes.
@@ -35,11 +35,11 @@ int start_stack(stack_t **stack)
  *
  * Return: STACK (0) in stack mode, QUEUE (1) in queue mode, otherwise 2.
  */
-int checks_mode(stack_t **stack)
+int checks_mode(stack_t *stack)
 {
-	if ((*stack)->n == STACK)
+	if ((stack)->n == STACK)
 		return (STACK);
-	else if ((*stack)->n == QUEUE)
+	else if ((stack)->n == QUEUE)
 		return (QUEUE);
 	else
 		return (2);

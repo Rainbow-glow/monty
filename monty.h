@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <sys\types.h>
 #include <ctype.h>
 #include <fcntl.h>
 
@@ -68,7 +67,7 @@ void cm_stack(stack_t **stack, unsigned int line_number);
 /* primary functions */
 int main(int argc, char **argv);
 void free_stack(stack_t **stack);
-void checks_mode(stack_t **stack);
+void checks_mode(stack_t *stack);
 void start_stack(stack_t **stack);
 void free_tokens(void);
 unsigned int token_arrlen(void);

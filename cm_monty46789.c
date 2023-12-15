@@ -19,7 +19,7 @@ void cm_add(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		setoperatoks_errror(shortstack_error(line_number, "add"));
+		setoperatoks_error(shortstack_error(line_number, "add"));
 		return;
 	}
 
