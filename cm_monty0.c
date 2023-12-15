@@ -31,7 +31,7 @@ void cm_push(stack_t **stack, unsigned int line_number)
 	{
 		if (operatoks[1][x] == '-' && x == 0)
 			continue;
-		if (operatoks[1][x] < '0' || operatoks[1][x] > 9)
+		if (operatoks[1][x] < '0' || operatoks[1][x] > '9')
 		{
 			setoperatoks_error(noint_error(line_number));
 			return;
