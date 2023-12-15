@@ -3,6 +3,7 @@
 void setoperatoks_error(int err_code);
 int malloc_error(void);
 int noint_error(unsigned int line_number);
+char **operatoks = NULL;
 
 /**
  * setoperatoks_error - sets last element of operatoks to be an error code.
