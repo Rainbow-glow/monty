@@ -77,7 +77,7 @@ int is_delim(char ch, char *delims);
 int get_word_length(char *str, char *delims);
 int get_word_count(char *str, char *delims);
 char *get_next_word(char *str, char *delims);
-char *get_int(int num);
+char *getline(int num);
 unsigned int _abs(int);
 int get_numbase_len(unsigned int num, unsigned int base);
 void fill_numbase_buff(unsigned int num, unsigned int base,

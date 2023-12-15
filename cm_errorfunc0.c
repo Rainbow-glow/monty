@@ -63,10 +63,6 @@ int malloc_error(void)
 
 int noint_error(unsigned int line_number)
 {
-<<<<<<< HEAD
 	fprintf(stderr, "L%u: push integer\n", line_number);
-=======
-	fprintf(stderr, "L%u: usage: push integer\n", line_number);
->>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 	return (EXIT_FAILURE);
 }
