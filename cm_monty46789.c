@@ -41,7 +41,7 @@ void cm_sub(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		setoperatoks_errror(shortstack_error(line_number, "sub"));
+		setoperatoks_error(shortstack_error(line_number, "sub"));
 		return;
 	}
 
@@ -62,7 +62,7 @@ void cm_div(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		setoperatoks_errror(shortstack_error(line_number, "div"));
+		setoperatoks_error(shortstack_error(line_number, "div"));
 		return;
 	}
 
@@ -83,7 +83,7 @@ void cm_mul(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		setoperatoks_errror(shortstack_error(line_number, "mul"));
+		setoperatoks_error(shortstack_error(line_number, "mul"));
 		return;
 	}
 
@@ -105,7 +105,7 @@ void cm_mod(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	{
-		setoperatoks_errror(shortstack_error(line_number, "mod"));
+		setoperatoks_error(shortstack_error(line_number, "mod"));
 		return;
 	}
 

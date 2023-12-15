@@ -1,62 +1,76 @@
 #include "monty.h"
+#include <string.h>
 
 void free_stack(stack_t **stack);
+<<<<<<< HEAD
 int start_stack(stack_t **stack);
+=======
+int init_stack(stack_t **stack);
+>>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 int checks_mode(stack_t *stack);
 
 /**
- * start_stack - Initiates a stack_t list with stack and queue nodes.
- * @stack: A pointer to an uninitiated stack.
- *
- * Return: EXIT_FAILURE if an error occurs, otherwise EXIT_SUCCESS.
+ * free_stack - Frees a stack_t stack.
+ * @stack: A pointer to the top (stack) or
+ *         bottom (queue) of a stack_t.
  */
-int start_stack(stack_t **stack)
+void free_stack(stack_t **stack)
 {
-	stack_t *p;
+	stack_t *tmp = *stack;
 
-	p = malloc(sizeof(stack_t));
-	if (p == NULL)
+	while (*stack)
 	{
-		return (EXIT_FAILURE);
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
 	}
+}
 
-	p->n = STACK;
-	p->prev = NULL;
-	p->next = NULL;
+/**
+ * init_stack - Initializes a stack_t stack with beginning
+ *              stack and ending queue nodes.
+ * @stack: A pointer to an unitialized stack_t stack.
+ *
+ * Return: If an error occurs - EXIT_FAILURE.
+ *         Otherwise - EXIT_SUCCESS.
+ */
+int init_stack(stack_t **stack)
+{
+	stack_t *s;
 
-	*stack = p;
+	s = malloc(sizeof(stack_t));
+	if (s == NULL)
+		return (malloc_error());
+
+	s->n = STACK;
+	s->prev = NULL;
+	s->next = NULL;
+
+	*stack = s;
 
 	return (EXIT_SUCCESS);
 }
 
 /**
- * checks_mode - Checks if the list is in stack or queue mode.
- * @stack: A pointer to an uninitiated stack.
+ * checks_mode - Checks if a stack_t linked list is in stack or queue mode.
+ * @stack: A pointer to the top (stack) or bottom (queue)
+ *         of a stack_t linked list.
  *
- * Return: STACK (0) in stack mode, QUEUE (1) in queue mode, otherwise 2.
+ * Return: If the stack_t is in stack mode - STACK (0).
+ *         If the stack_t is in queue mode - QUEUE (1).
+ *         Otherwise - 2.
  */
 int checks_mode(stack_t *stack)
 {
+<<<<<<< HEAD
 	if ((stack)->n == STACK)
 		return (STACK);
 	else if ((stack)->n == QUEUE)
+=======
+	if (stack->n == STACK)
+		return (STACK);
+	else if (stack->n == QUEUE)
+>>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 		return (QUEUE);
-	else
-		return (2);
-}
-
-/**
- * free_stack - Frees stack_t list.
- * @stack: A pointer to the stack or queue list.
- */
-void free_stack(stack_t **stack)
-{
-	stack_t *head = *stack;
-
-	while (*stack)
-	{
-		head = (*stack)->next;
-		free(*stack);
-		*stack = head;
-	}
+	return (2);
 }

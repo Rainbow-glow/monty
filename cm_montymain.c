@@ -1,5 +1,6 @@
+#define  _GNU_SOURCE
 #include "monty.h"
-#include <sys/types.h>
+/*#include <sys/types.h> */
 #include <sys/fcntl.h>
 
 /**
