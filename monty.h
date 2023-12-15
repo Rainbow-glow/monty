@@ -75,6 +75,7 @@ void free_tokens(void);
 unsigned int token_arrlen(void);
 int run_monty(FILE *script_fd);
 char **strtow(char *str, char *delims);
+char *get_int(int n);
 int is_delim(char ch, char *delims);
 int get_word_length(char *str, char *delims);
 int get_word_count(char *str, char *delims);
