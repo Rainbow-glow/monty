@@ -119,7 +119,7 @@ int run_monty(FILE *script_fd)
 	if (start_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (get_int(&line, &len, script_fd) != -1)
+	while (get_int(&line, &len, script_fd) != - 1)
 	{
 		line_number++;
 		operatoks = strtow(line, DELIMS);
