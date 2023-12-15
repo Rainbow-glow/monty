@@ -2,7 +2,11 @@
 #include <string.h>
 
 void free_stack(stack_t **stack);
+<<<<<<< HEAD
+int start_stack(stack_t **stack);
+=======
 int init_stack(stack_t **stack);
+>>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 int checks_mode(stack_t *stack);
 
 /**
@@ -58,9 +62,15 @@ int init_stack(stack_t **stack)
  */
 int checks_mode(stack_t *stack)
 {
+<<<<<<< HEAD
+	if ((stack)->n == STACK)
+		return (STACK);
+	else if ((stack)->n == QUEUE)
+=======
 	if (stack->n == STACK)
 		return (STACK);
 	else if (stack->n == QUEUE)
+>>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 		return (QUEUE);
 	return (2);
 }
