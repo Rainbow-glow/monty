@@ -3,6 +3,7 @@
 void setoperatoks_error(int err_code);
 int malloc_error(void);
 int noint_error(unsigned int line_number);
+char **operatoks = NULL;
 
 /**
  * setoperatoks_error - sets last element of operatoks to be an error code.
@@ -63,6 +64,11 @@ int malloc_error(void)
 
 int noint_error(unsigned int line_number)
 {
+<<<<<<< HEAD
 	fprintf(stderr, "L%u: push integer\n", line_number);
 	return (EXIT_FAILURE);
+=======
+	fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		return (EXIT_FAILURE);
+>>>>>>> 8f69564fa1b046dd0377de9048608a2d626960ea
 }
