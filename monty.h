@@ -6,10 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-<<<<<<< HEAD
-=======
 /* #include <sys\types.h> */
->>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 #include <ctype.h>
 #include <fcntl.h>
 
