@@ -69,13 +69,8 @@ void cm_stack(stack_t **stack, unsigned int line_number);
 /* primary functions */
 int main(int argc, char **argv);
 void free_stack(stack_t **stack);
-<<<<<<< HEAD
-void checks_mode(stack_t *stack);
-void start_stack(stack_t **stack);
-=======
 int checks_mode(stack_t *stack);
 int init_stack(stack_t **stack);
->>>>>>> 442236c1a5ef5e4d167481556ae7b24967648f6a
 void free_tokens(void);
 unsigned int token_arrlen(void);
 int run_monty(FILE *script_fd);

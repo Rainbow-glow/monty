@@ -116,10 +116,10 @@ int run_monty(FILE *script_fd)
 	unsigned int line_number = 0, prev_tok_len = 0;
 	void (*op_func)(stack_t**, unsigned int);
 
-	if (start_stack(&stack) == EXIT_FAILURE)
+	if (init_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (get_int(&line, &len, script_fd) != -1)
+	while (getline(&line, &len, script_fd) != -1)
 	{
 		line_number++;
 		operatoks = strtow(line, DELIMS);
